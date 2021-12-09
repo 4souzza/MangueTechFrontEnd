@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContatoComponent } from './contato/contato.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "inicio", component: InicioComponent },
   { path: "menu", component: MenuComponent },
   { path: "rodape", component: RodapeComponent },
+  { path: "logar", component: LoginComponent},
 
 ];
 
