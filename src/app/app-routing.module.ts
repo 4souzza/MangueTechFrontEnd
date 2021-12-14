@@ -6,6 +6,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "inicio", pathMatch: "full" },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: "menu", component: MenuComponent },
   { path: "rodape", component: RodapeComponent },
   { path: "logar", component: LoginComponent},
+  { path: "tema", component: TemaComponent},
 
 ];
 

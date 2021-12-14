@@ -11,6 +11,8 @@ import { ContatoComponent } from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TemaComponent } from './tema/tema.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { FormsModule } from '@angular/forms';
     CadastrarComponent,
     ContatoComponent,
     LoginComponent,
+    TemaComponent,
+    TemaEditComponent,
 
   ],
   imports: [
