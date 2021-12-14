@@ -10,5 +10,5 @@ import { AuthService } from './service/auth.service';
 export class AppComponent {
   constructor(
     public auth: AuthService
-  ){}
+  ) { }
 }
