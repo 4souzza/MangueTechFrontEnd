@@ -35,6 +35,7 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar(){
     this.usuario.tipo = this.tipoUser
+    // this.usuario.tipo = 'padrao'
   
 
   if(this.usuario.senha != this.confirmarSenha){
