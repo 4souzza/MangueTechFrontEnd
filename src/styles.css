@@ -10,3 +10,21 @@ html{
     font-size: 18pt;
 }
 /* * You can add global styles to this file, and also import other style files * */
+
+
+
+
+/*----------- BARRA DE NAVEGAÇÃO DE DENTRO DO SITE  -----------*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;300;400;700&display=swap');
+
+.navbar{
+    text-transform:lowercase;
+    font-weight: 500;
+    font-size: 24;
+    letter-spacing: .1rem;
+    color: white;
+    background-color: #4b6256;
+    backdrop-filter: blur(10px);
+    position:absolute;
+    font-family: Roboto;
+}
