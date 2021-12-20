@@ -25,7 +25,7 @@ body{
 
 .navbar-brand{
     height: 2rem;
-    font-size: 30pt;
+    font-size: 15pt;
 }
 
 .dropdown-menu{
@@ -57,7 +57,7 @@ body{
 /*-----Landing Page---------*/
 
 .bg-mangue{
-    background-image:url('/assets/img/91352.jpg');
+    background-image:url('/assets/paginaInicial/91352.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -131,7 +131,7 @@ body{
 
 .fixed-background{
     color:white;
-    background-image: url("/assets/img/fundo_tecnologia.jpg");
+    background-image: url("/assets/paginaInicial/fundo_tecnologia.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -193,7 +193,7 @@ body{
 }
 
 .folhasreais{
-    background-image: url('/assets/img/folhasrealistas.jpg');
+    background-image: url('/assets/paginaInicial/folhasrealistas.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -208,7 +208,7 @@ body{
 
 .fixed-background-equipe{
     color:preto;
-    background-image: url("/assets/img/equipe.jpg");
+    background-image: url("/assets/paginaInicial/equipe.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     /*background-attachment: fixed;*/
@@ -279,20 +279,20 @@ footer i{
     grid-gap: 10px;
 }
 .card:nth-child(1) .front-card{
-    background: url("/assets/img/aldair.jpg") center/cover no-repeat;
+    background: url("/assets/paginaInicial/aldair.jpg") center/cover no-repeat;
 }
 .card:nth-child(2) .front-card{
-    background: url("/assets/img/arthur.jpeg") center/cover no-repeat;
+    background: url("/assets/paginaInicial/arthur.jpeg") center/cover no-repeat;
 }
 .card:nth-child(3) .front-card{
-    background: url("/assets/img/brenda.jpeg") center/cover no-repeat;
+    background: url("/assets/paginaInicial/brenda.jpeg") center/cover no-repeat;
 }
 .card:nth-child(4) .front-card{
-    background:  url("/assets/img/edu.jpeg") center/cover no-repeat;
+    background:  url("/assets/paginaInicial/edu.jpeg") center/cover no-repeat;
 }
 
 .card:nth-child(5) .front-card{
-    background: url("/assets/img/malu.jpg") center/cover no-repeat;
+    background: url("/assets/paginaInicial/malu.jpg") center/cover no-repeat;
 }
 
 .card{
