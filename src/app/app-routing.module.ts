@@ -10,11 +10,12 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
+import { PaginainicialComponent } from './paginainicial/paginainicial.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "inicio", pathMatch: "full" },
+  { path: "", redirectTo: "paginainicial", pathMatch: "full" },
   { path: "cadastrar", component: CadastrarComponent },
   { path: "contato", component: ContatoComponent},
   { path: "inicio", component: InicioComponent },
@@ -22,6 +23,8 @@ const routes: Routes = [
   { path: "rodape", component: RodapeComponent },
   { path: "logar", component: LoginComponent},
   { path: "tema", component: TemaComponent},
+  { path: "paginainicial", component: PaginainicialComponent},
+
 
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},

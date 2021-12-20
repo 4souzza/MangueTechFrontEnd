@@ -16,6 +16,10 @@ import { TemaService } from '../service/tema.service';
 })
 export class InicioComponent implements OnInit {
 
+  nome = environment.nome
+  foto = environment.foto
+  id = environment.id
+
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
 
@@ -35,6 +39,7 @@ export class InicioComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+
 
     if(environment.token == ''){
       //alert('Sua sessão expirou, faça o login novamente.')

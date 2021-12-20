@@ -18,6 +18,7 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { PaginainicialComponent } from './paginainicial/paginainicial.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     PostagemEditComponent,
     PostagemDeleteComponent,
     UserEditComponent,
+    PaginainicialComponent,
 
   ],
   imports: [

@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;300;400;700&display=swap');
+
+html{
+    padding:0px;
+    margin:0px;
+}
+body{
+    font-family: Roboto;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/*-----Navigation---------*/
+
+.navbar{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16;
+    letter-spacing: .1rem;
+    background-color: rgba(0,0,0, 0.15);
+    position:absolute;
+    font-family: Roboto;
+}
+
+
+.navbar-brand{
+    height: 2rem;
+    font-size: 15pt;
+}
+
+.dropdown-menu{
+    background-color: transparent !important;
+}
+.dropdown-item {
+    background-color: rgba(0,0,0, 0.15) !important;
+    color: #FFF !important;
+}
+
+
+
+
+.navbar-nav li{
+    padding:.3rem;
+    color: white;
+}
+
+.trocar:hover, .dropdown-item:hover, .dropdown-toggle:hover{
+    color: #00FF00!important;
+}
+
+/*-----Landing Page---------*/
+
+.bg-escuro{
+    background-color: rgba(0,0,0, 0.15);
+}
+
+/*-----Landing Page---------*/
+
+.bg-mangue{
+    background-image:url('/assets/paginaInicial/91352.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.caption{
+    width:100%;
+    max-width: 100%;
+    position: absolute;
+    top:18%;
+    z-index:1;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-family: Roboto;
+}
+
+.caption h1{
+    font-size: 1400%;  
+    color: white;
+}
+
+.caption h1:hover{
+    transform:scale(1.2);
+    transition: 1.8s ease-in-out;
+    color:rgba(0,255,127,0.4)
+}
+
+
+.sp1{
+    display: block;;
+}
+
+
+
+/*-------------Sobre---------------*/
+
+.bg-sobre{
+    background: #10290e;
+}
+
+.transparent{
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    border-radius:5px;
+    color:whitesmoke;
+    font-family: Roboto;
+    
+
+}
+
+.transparent:hover{
+    background-color: rgba(255, 255, 255,0.2);
+    transform:scale(1.2);
+    transition: 0.5s;
+    backdrop-filter:blur(10px);
+}
+
+.transparent h1{
+    font-size: 40px;
+    font-family: Roboto;
+}
+
+.transparent p{
+    font-size: 20px;
+}
+
+/*-----Tecnologias---------*/
+
+.fixed-background{
+    color:white;
+    background-image: url("/assets/paginaInicial/fundo_tecnologia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    z-index: -1;
+    
+
+}
+
+#tecnologias{
+    font-family: Roboto;
+    /* max-width: 100vw */
+}
+
+.tech{
+    background-color: rgba(255,255,255, 0.001);
+    border-radius: 5%;
+    padding-top: 10px;
+    font-family: Roboto;
+    
+}
+
+
+.tech:hover{
+    background-color: rgba(0,255,127, 0.1);
+    border-radius: 5%;
+    padding-top: 10px;
+    transform:scale(1.1);
+    transition: 0.5s;
+    
+    
+}
+
+.dark{
+    background-color: rgba(0,0,0, 0.6);
+}
+
+/*-----Missão ---------*/
+
+
+#missaovisao{
+    font-family: Roboto;
+}
+.missaoh1{
+    color:whitesmoke;
+}
+
+.picture{ 
+    background-color: rgb(97, 114, 50);
+    border-radius: 2%;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    color:whitesmoke;
+}
+
+.picture:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.folhasreais{
+    background-image: url('/assets/paginaInicial/folhasrealistas.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    z-index: -1;
+}
+
+
+
+
+/*-----Equipe ---------*/
+
+.fixed-background-equipe{
+    color:preto;
+    background-image: url("/assets/paginaInicial/equipe.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    width: 100vw;
+    z-index: -1;
+   
+}
+
+
+.equipeh1{
+    color:whitesmoke;
+    margin-top: 5rem;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+}
+
+
+/*-----Sobre ---------*/
+
+/*.fixed-background-sobre{
+    color:white;
+    background-image: url("/assets/img/fundo_tecnologia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    z-index: -1;
+    
+
+}
+
+
+
+/*-----Footer---------*/
+
+footer{
+    /* background-color: black; */
+    color: white;
+}
+
+footer i{
+    color:#2ECC71;
+}
+
+
+/*-------Cards Equipe-----------*/
+
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;;
+    margin: 0px auto;
+}
+.about-info img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.cards-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+.card:nth-child(1) .front-card{
+    background: url("/assets/paginaInicial/aldair.jpg") center/cover no-repeat;
+}
+.card:nth-child(2) .front-card{
+    background: url("/assets/paginaInicial/arthur.jpeg") center/cover no-repeat;
+}
+.card:nth-child(3) .front-card{
+    background: url("/assets/paginaInicial/brenda.jpeg") center/cover no-repeat;
+}
+.card:nth-child(4) .front-card{
+    background:  url("/assets/paginaInicial/edu.jpeg") center/cover no-repeat;
+}
+
+.card:nth-child(5) .front-card{
+    background: url("/assets/paginaInicial/malu.jpg") center/cover no-repeat;
+}
+
+.card{
+    height: 450px;
+    perspective: 1000px;
+    width: 100%;
+}
+.card-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 9px -3px rgba(0, 0, 0, 0.5);
+}
+.card:hover .card-wrapper{
+    transform: rotateY(180deg);
+}
+.front-card, .rear-card{
+    border-radius: 4px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.rear-card{
+    text-align: center;
+    transform: rotateY(180deg);
+    background:#2ECC71;
+    ;
+    color: #fff;
+    padding: 20px;
+}
+.front-card div{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    line-height: 1.6;
+}
+.rear-card p{
+    line-height: 1.6;
+    font-size: 15px;
+    font-weight: 300;
+}
+.about-info{
+    margin-top: 18px;
+}
+.about-info div h2{
+    font-size: 19px;
+    padding: 10px 0 2px;
+}
+
+
+/* invensão do thiago */
+.borda {
+    text-shadow: 2px 0 0 #141212, -2px 0 0 #141212, 0 2px 0 #141212, 0 -2px 0 #141212, 1px 1px #141212, -1px -1px 0 #141212, 1px -1px 0 #141212, -1px 1px 0 #141212;
+}
