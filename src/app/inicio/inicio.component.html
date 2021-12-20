@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 <body class="bg-cordefundo">
 
 	<div class="container">
@@ -9,9 +12,9 @@
 							class="img-fluid rounded-circle">
 					</div>
 					<div class="nomeperfil">
-						<p class="m-0 font-weight-bold text-verde fs-16"> Olá, {{nome}}</p>
+						<p class="m-0 font-weight-bold text-verde fs-18"> Olá, {{nome}}</p>
 						<a [routerLink]="['/user-edit',id]">
-							<p class="text-verde fs-16 m-0"><i class="far fa-edit"></i></p>
+							<p class="text-white fs-5 m-0 texto-editar">Editar perfil</p>
 						</a>
 					</div>
 				</div>
@@ -83,7 +86,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="post-container">
+			<div class="post-container mt-3">
 				<div class="row">
 					<div class="col-12">
 						<div class="tab-content" id="v-pills-tabContent">
@@ -201,7 +204,7 @@
 			</div>
 			<div class="event">
 				<div>
-					<img src="/src/assets/inicioImagem/feed-image-2.png" width="200px" height="100px" alt="cursos">
+					<img src="/src/assets/inicioImagem/friends.png" width="200px" height="100px" alt="evento com amigos">
 					<p>Participa de algum evento local? Não perde tempo e compartilha aqui!
 					<p>#somosmanguetech</p>
 				</div>
