@@ -1,4 +1,320 @@
-.caranguejo{
-    width: 100vw;
-    height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;300;400;700&display=swap");
+
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+} */
+:root{
+	--body-color:  #ebecec;
+	--nav-color: #1876f2;
+	--bg-color: #fff;
+
+}
+.bg-cor-lateral{
+	background-color: #4b6256;
+}
+
+body{
+	background: var(--body-color);
+	transition: background 0.3s;
+	min-height: 80vh;
+	min-width: 100vw;
+}
+
+.bg-cordefundo{	
+	background:#ebecec;
+}
+
+
+.container{
+	display: flex;
+	justify-content: space-between;
+	padding: 13px 5%;
+	min-width: 80vh;
+}
+.left-sidebar{
+	flex-basis: 25%;
+	position: sticky;
+	top: 60px;
+	align-self: flex-start;
+	color: whitesmoke;
+	padding-top: 10px;
+	border-radius: 10px;
+	background: #4b6256;
+	
+}
+
+.left-sidebar .profile .imagem, .nomeperfil{
+	color: white;
+	display: flex;
+	justify-content: center;
+	background-color: #4b6256;
+}
+
+.left-sidebar .profile .nomeperfil{
+	padding-top: 10px;
+}
+
+.left-sidebar .profile .nomeperfil p{
+	padding-left: 5px;
+}
+
+
+
+.left-sidebar .teste{
+	margin-top:100px;
+	background-color: #4b6256;
+	display: flex;
+	font-weight: 700;
+	justify-content: center;
+}
+
+.left-sidebar .teste{
+	margin-top:100px;
+	background-color: rgba(255,255,255,0.3);
+	display: flex;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 10px;
+}
+
+.left-sidebar .teste .nav .nav-link:hover{
+	background-color: #4b6256;
+	
+	
+}
+
+
+
+.right-sidebar{
+	flex-basis: 25%;
+	position: sticky;
+	top: 60px;
+	align-self: flex-start;
+	background: #4b6256;
+	padding:20px;
+	padding-left: 40px;
+	border-radius: 10px;
+	color:white;
+	display: block;
+	justify-content: center;
+}
+
+.right-sidebar .event img{
+	border-radius: 10px;
+}
+
+.main-content{
+	width: 47%;
+}
+
+
+.sidebar-title{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 18px;
+}
+.right-sidebar h4{
+	font-weight: 600;
+	font-size: 16px;
+}
+.sidebar-title a{
+	text-decoration: none;
+	color:var(--nav-color);
+	font-size: 12px;
+}
+
+.right-event{
+	line-height: 1.5;
+}
+.event p{
+	margin-top: 10px;
+	font-size:12px;
+	font-weight: bold;
+}
+.event a{
+	font-size: 12px;
+	text-decoration: none;
+	color:var(--nav-color);
+}
+.left-event span{
+	position: absolute;
+	bottom:0;
+	left:0;
+	width: 100%;
+	background: var(--nav-color);
+	color:#fff;
+	font-size:10px;
+	padding:4px 0;
+}
+.sidebar-ads{
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 4px;
+}
+
+.story-gallery{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.story{
+	flex-basis: 18%;
+	padding-top: 32%;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+}
+
+.story p{
+	position: absolute;
+	width: 100%;
+	bottom: 10px;
+	text-align: center;
+	color:#fff;
+	font-size: 14px;
+}
+.story1{
+	background-image: linear-gradient(transparent,rgba(0,0,0,0.5)), url(/assets/inicioImagem/emprego.jpg);
+}
+.story1:hover{
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+.story2{
+	background-image: linear-gradient(transparent,rgba(0,0,0,0.5)), url(/assets/inicioImagem/voluntario.jpg);
+}
+.story2:hover{
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+
+.story3{
+	background-image: linear-gradient(transparent,rgba(0,0,0,0.5)), url(/assets/inicioImagem/cursos.jpg);
+}
+.story3:hover{
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+.story4{
+	background-image: linear-gradient(transparent,rgba(0,0,0,0.5)), url(/assets/inicioImagem/reciclagem.jpg);
+}
+
+.story4:hover{
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+
+.story5{
+	background-image: linear-gradient(transparent,rgba(0,0,0,0.5)), url(/assets/inicioImagem/parceria.jpg);
+}
+.story5:hover{
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+.story.story1 img{
+	top:unset;
+	left: 50%;
+	bottom:40px;
+	transform: translateX(-50%);
+	border:0;
+	width: 35px;
+}
+.write-post-container{
+	width: 100%;
+	background:var(--bg-color);
+	border-radius: 6px;
+	padding:30px;
+	color:#626262;
+}
+
+.post-input-container{
+	padding-left:55px;
+	padding-top:20px;
+}
+.post-input-container textarea{
+	width: 90%;
+	resize:none;
+	border:0;
+	outline:0;
+	border-bottom: 1px solid #ccc;
+	background:transparent;
+}
+.add-post-links{
+	display: flex;
+	margin-top:10px;
+}
+.add-post-links a{
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	color:#626262;
+	margin-right: 30px;
+	font-size: 13px;
+}
+.add-post-links img{
+	width:20px;
+	margin-right:10px;
+}
+.post-container{
+	width: 100%;
+	background:var(--bg-color);
+	border-radius: 6px;
+	padding: 20px;
+	color:#626262;
+	margin:20px 0;
+}
+
+.write-post-container{
+	height: 200px;
+}
+
+.post-input-container{
+	height: 50px;
+}
+
+.user-profile span{
+	font-size: 13px;
+	color:#9a9a9a;
+}
+.post-text{
+	color:#9a9a9a;
+	margin:1px 0;
+	font-size: 15px;
+}
+.post-text span{
+	color:#626262;
+	font-weight: 500;
+}
+.post-text a{
+	color:#1876f2;
+	text-decoration: none;
+}
+.post-img{
+	width: 100%;
+	border-radius: 4px;
+	margin-bottom: 5px;
+}
+.post-row{
+	margin-top:10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.activity-icons div img{
+
+	width:18px;
+	margin-right:10px;
+}
+
+.footer{
+	text-align: center;
+	color:#9a9a9a;
+	padding:10px 0 20px;
+	font-size: 13px;
 }
