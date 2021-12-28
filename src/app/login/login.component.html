@@ -1,30 +1,111 @@
-<title>Entre</title>
-
-<body>
-    <div class="entrar">
-        <h2>Entre</h2>
-        <form action="login.html" method="post">
-            <div class="input-field">
-                <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario"
-                    placeholder="Seu usuário aqui">
-                <label for="nome">E-mail</label>
-            </div>
-            <div class="input-field">
-                <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
-                    placeholder="Digite a senha">
-                <label for="senha">Senha</label>
-            </div>
-            <div class="centro">
-                <button type="submit" class="btn btn-success" (click)='entrar()'>Entrar</button>
-            </div>
-
-        </form>
-        <div class="links-uteis text-center">
-            <a href="">
-                <p>Esqueceu sua senha?</p>
-            </a>
-            <p>
-            <a routerLink="/cadastrar">Cadastre-se</a>
-            </p>
+<!--Home-->
+<div id="home" class="bg-mangue">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light w-100 fixed-top">
+        <a class="navbar-brand text-white trocar" href="#paginainicial">MANGUE<span class="">TECH</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Manguetech-se
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#logar">Login</a>
+                        <a class="dropdown-item" href="#cadastrar">Cadastrar</a>
+                        <a class="dropdown-item" href="#contato">Contato</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
+    <!--End Navbar-->
+    <!--Start Landing Page Section-->
+
+    <title>Entre</title>
+
+    <body>
+        <div class="entrar">
+            <h2>Entre</h2>
+            <form action="login.html" method="post">
+                <div class="input-field">
+                    <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario"
+                        placeholder="Seu usuário aqui">
+                    <label for="nome">E-mail</label>
+                </div>
+                <div class="input-field">
+                    <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
+                        placeholder="Digite a senha">
+                    <label for="senha">Senha</label>
+                </div>
+                <div class="centro">
+                    <button type="submit" class="btn btn-success" (click)='entrar()'>Entrar</button>
+                </div>
+
+            </form>
+            <div class="links-uteis text-center">
+                <a href="">
+                    <p>Esqueceu sua senha?</p>
+                </a>
+                <p>
+                    <a routerLink="/cadastrar">Cadastre-se</a>
+                </p>
+            </div>
+        </div>
+    </body>
+
+<!--Footer-->
+    <footer>
+        <div class="container-fluid container-footer">
+            <div class="row d-flex justify-content-center">
+                <div class="footer-col col-md-3">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#pilares">Pilares</a></li>
+                        <li><a href="#tecnologias">Tecnologias</a></li>
+                        <li><a href="#equipe">Equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col col-md-3">
+                    <h4>Manguetech-se</h4>
+                    <ul>
+                        <li><a href="#contato">FAQ</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#login">Login</a></li>
+                        <li><a href="#cadastrar">Cadastro</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col col-md-3">
+                    <h4>LinkedIn</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/aldair-soares/" target="_blank">Aldair
+                                Soares</a></li>
+                        <li><a href="https://www.linkedin.com/in/arthur-souza-35b141182/" target="_blank">Arthur
+                                Souza</a></li>
+                        <li><a href="https://www.linkedin.com/in/brenda-stefany-devjr/" target="_blank">Brenda
+                                Stefany</a></li>
+                        <li><a href="https://www.linkedin.com/in/educastroo/" target="_blank">Eduardo Castro</a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/maria-luiza-moura-638906116/"
+                                target="_blank">Maria Luiza Moura</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col col-md-3">
+                    <h4>Nossas redes</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
