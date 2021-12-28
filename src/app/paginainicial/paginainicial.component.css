@@ -70,7 +70,7 @@ body{
     width:100%;
     max-width: 100%;
     position: absolute;
-    top:18%;
+    top:38%;
     z-index:1;
     color: white;
     text-transform: uppercase;
@@ -79,7 +79,7 @@ body{
 }
 
 .caption h1{
-    font-size: 1400%;  
+    font-size: 1000%;  
     color: white;
 }
 
