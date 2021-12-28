@@ -1,40 +1,30 @@
-<div class="container-fluid">
-    <div class="row d-flex align-items-center">
-        <div class="col-md-6">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6">
-                    <h1 class="text-center mb-3">Entrar</h1>
+<title>Entre</title>
 
-                    <form>
-                        <div class="form-group">
-                            <label for="usuario">Usuário</label>
-                            <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario"
-                                id="usuario" placeholder="Seu usuario aqui">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="senha">Senha</label>
-                            <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha"
-                                id="senha" placeholder="Digite a senha">
-                        </div>
-
-                        <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-success" (click)='entrar()'>Entrar</button>
-                        </div>
-                    </form>
-
-                    <hr class="mt-5 mb-5">
-
-                    <p class="text-center">
-                        Não tem uma conta? <a routerLink="/cadastro">Cadastre-se</a>
-                    </p>
-
-                </div>
+<body>
+    <div class="entrar">
+        <h2>Entre</h2>
+        <form action="login.html" method="post">
+            <div class="input-field">
+                <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario"
+                    placeholder="Seu usuário aqui">
+                <label for="nome">E-mail</label>
             </div>
-        </div>
-        <div class="col-md-6" id="imagem-fundo">
-        </div>
+            <div class="input-field">
+                <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
+                    placeholder="Digite a senha">
+                <label for="senha">Senha</label>
+            </div>
+            <div class="centro">
+                <button type="submit" class="btn btn-success" (click)='entrar()'>Entrar</button>
+            </div>
 
-
+        </form>
+        <div class="links-uteis text-center">
+            <a href="">
+                <p>Esqueceu sua senha?</p>
+            </a>
+            <p>
+            <a routerLink="/cadastrar">Cadastre-se</a>
+            </p>
+        </div>
     </div>
-</div>
