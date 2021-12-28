@@ -20,6 +20,7 @@ body{
     background-color: rgba(0,0,0, 0.15);
     position:absolute;
     font-family: Roboto;
+    position: fixed;
 }
 
 
@@ -349,7 +350,105 @@ footer i{
 }
 
 
-/* invensão do thiago */
+/* invenção do thiago */
 .borda {
     text-shadow: 2px 0 0 #141212, -2px 0 0 #141212, 0 2px 0 #141212, 0 -2px 0 #141212, 1px 1px #141212, -1px -1px 0 #141212, 1px -1px 0 #141212, -1px 1px 0 #141212;
+}
+
+
+.container-footer{
+    max-width: 100%;
+    margin: auto;
+   
+}
+
+
+ul{
+    list-style: none;
+}
+
+
+footer{ 
+    padding: 90px;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+
+.footer-col h4::before{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: 200px;
+    background-color: green;
+    padding-right: 100px;
+    height: 2px;
+    box-sizing: border-box;
+    width: 150px;
+}
+
+.footer-col ul{
+    padding-left: 0px;
+}
+
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin-right: 0px 10px 0px 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color:#ffffff;
+    transition: all 0.5 ease;
+}
+
+.footer-col .social-links a:hover{ 
+    color: #24262b;
+    background-color: #ffffff;
+
+}
+
+/*----Responsive---*/
+
+@media(max-width: 800px){
+    .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
 }
