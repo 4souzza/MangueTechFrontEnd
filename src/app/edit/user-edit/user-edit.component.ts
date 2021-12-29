@@ -43,7 +43,6 @@ export class UserEditComponent implements OnInit {
 
   atualizar() {
     this.user.tipo = this.tipoUsuario
-    this.user.tipo = this.tipoUsuario
 
     if (this.user.senha != this.confirmarSenha) {
       alert('A senhas estão incorretas.')
@@ -51,7 +50,7 @@ export class UserEditComponent implements OnInit {
       this.authService.putUsuario(this.user).subscribe((resp: Usuario) => {
         this.user = resp
         
-        alert('Usuário atualizado com sucesso ❤!!')
+        alert('Usuário atualizado com sucesso!!')
         environment.token = ''
         environment.nome = ''
         environment.foto = ''

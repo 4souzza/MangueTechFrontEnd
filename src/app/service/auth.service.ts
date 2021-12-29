@@ -42,7 +42,7 @@ export class AuthService {
   }
 
   putUsuario(usuario: Usuario): Observable<Usuario>{
-    return this.http.put<Usuario>('https://blogpessoalbs.herokuapp.com/usuarios/atualizar', usuario, this.token)
+    return this.http.put<Usuario>('https://manguetech.herokuapp.com/usuarios/atualizar', usuario, this.token)
   }
 
   logado() {
