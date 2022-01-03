@@ -24,7 +24,7 @@ html{
 .navbar{
     text-transform:lowercase;
     font-weight: 500;
-    font-size: 24;
+    font-size: 18px;
     letter-spacing: .1rem;
     color: white;
     background-color: #4b6256;
