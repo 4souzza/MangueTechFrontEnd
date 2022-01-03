@@ -25,7 +25,7 @@ body{
 }
 
 .bg-cordefundo{	
-	background:#ebecec;
+	background:#d7e4c5;
 }
 
 
@@ -44,7 +44,7 @@ body{
 	color: whitesmoke;
 	padding-top: 10px;
 	border-radius: 10px;
-	background: #4b6256;
+	background: #4B7F52;
 	
 }
 
@@ -57,7 +57,7 @@ body{
 	color: white;
 	display: block;
 	justify-content: center;
-	background-color: #4b6256;
+	background-color: #4B7F52;
 }
 
 .left-sidebar .profile .nomeperfil{
@@ -72,7 +72,7 @@ body{
 
 .left-sidebar .teste{
 	margin-top:100px;
-	background-color: #4b6256;
+	background-color: #7DD181;
 	display: flex;
 	font-weight: 700;
 	justify-content: center;
@@ -88,7 +88,8 @@ body{
 }
 
 .left-sidebar .teste .nav .nav-link:hover{
-	background-color: #4b6256;
+	color: white;
+	transform: scale(1.1);
 	
 	
 }
@@ -100,7 +101,7 @@ body{
 	position: sticky;
 	top: 60px;
 	align-self: flex-start;
-	background: #4b6256;
+	background: #4B7F52;
 	padding:20px;
 	padding-left: 40px;
 	border-radius: 10px;
