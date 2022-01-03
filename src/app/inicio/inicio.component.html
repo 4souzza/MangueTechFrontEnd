@@ -1,19 +1,18 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 <body class="bg-cordefundo">
-
 	<div class="container">
 		<div class="left-sidebar">
 			<div class="imp-links bg-cor-lateral">
 				<div class="profile">
 					<div class="imagem">
-						<img src="{{foto}}" alt="Imagem do user" width="80px" height="80px"
-							class="img-fluid rounded-circle">
+						<img src="{{ foto }}" alt="Imagem do user" width="80px" height="80px"
+							class="img-fluid rounded-circle" />
 					</div>
 					<div class="nomeperfil">
-						<p class="m-0 font-weight-bold text-verde fs-18"> Olá, {{nome}}</p>
-						<a [routerLink]="['/user-edit',id]">
+						<p class="m-0 font-weight-bold text-verde fs-18">Olá, {{ nome }}</p>
+						<a [routerLink]="['/user-edit', id]">
 							<p class="text-white fs-5 m-0 texto-editar">Editar perfil</p>
 						</a>
 					</div>
@@ -24,7 +23,7 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
 					<div class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<a class="nav-link active text-white" id="v-pills-minhaspostagens-tab" data-toggle="pill"
 							href="#v-pills-minhaspostagens" role="tab" aria-controls="v-pills-minhaspostagens"
-							aria-selected="true">Minhas Postagens</a>
+							aria-selected="true" (click)="findIdUsuario()">Minhas Postagens</a>
 						<a class="nav-link text-white" id="v-pills-todaspostagens-tab" data-toggle="pill"
 							href="#v-pills-todaspostagens" role="tab" aria-controls="v-pills-todaspostagens"
 							aria-selected="false">Explorar</a>
@@ -64,7 +63,7 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
 			</div>
 			<div class="write-post-container bg-white">
 				<div>
-					<p>O que você está pensando, {{nome}}?</p>
+					<p>O que você está pensando, {{ nome }}?</p>
 				</div>
 				<div class="post-input-container">
 					<a data-toggle="modal" data-target="#novaPostagem">
@@ -72,15 +71,15 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
 					</a>
 					<div class="add-post-links">
 						<a href="#">
-							<img src="/assets/inicioImagem/live-video.png">
+							<img src="/assets/inicioImagem/live-video.png" />
 							Live Video
 						</a>
 						<a href="#">
-							<img src="/assets/inicioImagem/photo.png">
+							<img src="/assets/inicioImagem/photo.png" />
 							Photo/Video
 						</a>
 						<a href="#">
-							<img src="/assets/inicioImagem/feeling.png">
+							<img src="/assets/inicioImagem/feeling.png" />
 							Feeling/Activity
 						</a>
 					</div>
@@ -93,19 +92,23 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
 							<div class="tab-pane fade show active" id="v-pills-minhaspostagens" role="tabpanel"
 								aria-labelledby="v-pills-minhaspostagens-tab">
 								<!--Minhas Postagens-->
-								<div class="card-deck">
-									<div class="card" *ngFor='let item of usuario.postagem'>
+								<div class="card-deck flex-column">
+									<div class="card" *ngFor="let item of usuario.postagem">
 										<div class="card-body">
-											<h5 class="card-title m-0">{{item.titulo}}</h5>
-											<small class="text-muted">Tema: {{item.tema.descricao}}</small>
-											<p class="card-text mt-3">{{item.texto}}</p>
-											<p class="card-text"><small class="text-muted">{{item.date | date:
-													'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}} </small></p>
+											<h5 class="card-title m-0">{{ item.titulo }}</h5>
+											<small class="text-muted">Tema: {{ item.tema.descricao }}</small>
+											<p class="card-text mt-3">{{ item.texto }}</p>
+											<p class="card-text">
+												<small class="text-muted">{{ item.data | date: "dd/MM/yyyy" }} às
+													{{ item.data | date: "HH:mm" }}
+												</small>
+											</p>
 
 											<!--Editar e deletar as postagens-->
-											<a [routerLink]="['/postagem-edit',item.id]" class="text-info mr-3" href="">
+											<a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3"
+												href="">
 												Editar</a>
-											<a [routerLink]="['/postagem-delete',item.id]" class="text-danger"
+											<a [routerLink]="['/postagem-delete', item.id]" class="text-danger"
 												href="">Apagar
 											</a>
 										</div>
@@ -116,65 +119,88 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
 							<div class="tab-pane fade" id="v-pills-todaspostagens" role="tabpanel"
 								aria-labelledby="v-pills-todaspostagens-tab">
 								<!--Todas as postagens-->
-								<div class="card-deck">
-									<div class="card" *ngFor='let item of listaPostagens'>
+								<div class="card-deck flex-column">
+									<div class="card" *ngFor="let item of listaPostagens">
 										<div class="card-body">
-											<h5 class="card-title m-0">{{item.titulo}}</h5>
-											<small class="text-muted">Tema: {{item.tema.descricao}}</small>
-											<p class="card-text mt-3">{{item.texto}}</p>
-											<p class="card-text"><small class="text-muted">{{item.date | date:
-													'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}} </small></p>
-											<p class="card-text"><small class="text-muted">by:
-													{{item.usuario.nome}}</small></p>
+											<h5 class="card-title m-0">{{ item.titulo }}</h5>
+											<small class="text-muted">Tema: {{ item.tema.descricao }}</small>
+											<p class="card-text mt-3">{{ item.texto }}</p>
+											<p class="card-text">
+												<small class="text-muted">{{ item.data | date: "dd/MM/yyyy" }} às
+													{{ item.data | date: "HH:mm" }}
+												</small>
+											</p>
+											<p class="card-text">
+												<small class="text-muted">by: {{ item.usuario.nome }}</small>
+											</p>
 										</div>
 									</div>
 								</div>
 							</div>
-							<!--Todas as postagens-->
-						</div>
-						<div class="tab-pane fade" id="v-pills-vagas" role="tabpanel"
-							aria-labelledby="v-pills-vagas-tab">
-							<div class="card-deck" *ngFor='let tema of listaTemas'>
-								<div class="card" *ngFor='let item of tema.postagem'>
-									<div class="card-body">
-										<h5 class="card-title m-0">{{item.titulo}}</h5>
-										<p class="card-text mt-3">{{item.texto}}</p>
-										<p class="card-text"><small class="text-muted">{{item.date | date:
-												'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}} </small></p>
-										<p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="v-pills-cursos" role="tabpanel"
-							aria-labelledby="v-pills-cursos-tab">
-							<div class="card-deck" *ngFor='let tema of listaTemas'>
-								<div class="card" *ngFor='let item of tema.postagem'>
-									<div class="card-body">
-										<h5 class="card-title m-0">{{item.titulo}}</h5>
-										<p class="card-text mt-3">{{item.texto}}</p>
-										<p class="card-text"><small class="text-muted">{{item.date | date:
-												'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}} </small></p>
-										<p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small>
-										</p>
-									</div>
-								</div>
+							<!-- Fim Todas as postagens-->
 
+							<div class="tab-pane fade" id="v-pills-vagas" role="tabpanel"
+								aria-labelledby="v-pills-vagas-tab">
+								<div class="card-deck flex-column" *ngFor="let tema of listaTemas">
+									<ng-container *ngIf="tema.id == 1">
+										<h3>{{tema.descricao}}</h3>
+										<div class="card" *ngFor="let item of tema.postagem">
+											<div class="card-body">
+												<h5 class="card-title m-0">{{ item.titulo }}</h5>
+												<p class="card-text mt-3">{{ item.texto }}</p>
+												<p class="card-text">
+													<small class="text-muted">{{ item.data | date: "dd/MM/yyyy" }} às
+														{{ item.data | date: "HH:mm" }}
+													</small>
+												</p>
+												<p class="card-text">
+													<small class="text-muted">by: {{ item.usuario.nome }}</small>
+												</p>
+											</div>
+										</div>
+									</ng-container>
+								</div>
 							</div>
-						</div>
-						<div class="tab-pane fade" id="v-pills-voluntariado" role="tabpanel"
-							aria-labelledby="v-pills-voluntariado-tab">
-							<div class="card-deck" *ngFor='let tema of listaTemas'>
-								<div class="card" *ngFor='let item of tema.postagem'>
-									<div class="card-body">
-										<h5 class="card-title m-0">{{item.titulo}}</h5>
-										<p class="card-text mt-3">{{item.texto}}</p>
-										<p class="card-text"><small class="text-muted">{{item.date | date:
-												'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}} </small></p>
-										<p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small>
-										</p>
-									</div>
+							<div class="tab-pane fade" id="v-pills-cursos" role="tabpanel"
+								aria-labelledby="v-pills-cursos-tab">
+								<div class="card-deck flex-column" *ngFor="let tema of listaTemas">
+									<ng-container *ngIf="tema.id == 2">
+										<div class="card" *ngFor="let item of tema.postagem">
+											<div class="card-body">
+												<h5 class="card-title m-0">{{ item.titulo }}</h5>
+												<p class="card-text mt-3">{{ item.texto }}</p>
+												<p class="card-text">
+													<small class="text-muted">{{ item.data | date: "dd/MM/yyyy" }} às
+														{{ item.data | date: "HH:mm" }}
+													</small>
+												</p>
+												<p class="card-text">
+													<small class="text-muted">by: {{ item.usuario.nome }}</small>
+												</p>
+											</div>
+										</div>
+									</ng-container>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="v-pills-voluntariado" role="tabpanel"
+								aria-labelledby="v-pills-voluntariado-tab">
+								<div class="card-deck flex-column" *ngFor="let tema of listaTemas">
+									<ng-container *ngIf="tema.id == 3">
+										<div class="card" *ngFor="let item of tema.postagem">
+											<div class="card-body">
+												<h5 class="card-title m-0">{{ item.titulo }}</h5>
+												<p class="card-text mt-3">{{ item.texto }}</p>
+												<p class="card-text">
+													<small class="text-muted">{{ item.data | date: "dd/MM/yyyy" }} às
+														{{ item.data | date: "HH:mm" }}
+													</small>
+												</p>
+												<p class="card-text">
+													<small class="text-muted">by: {{ item.usuario.nome }}</small>
+												</p>
+											</div>
+										</div>
+									</ng-container>
 								</div>
 							</div>
 						</div>
@@ -188,14 +214,17 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
 			</div>
 			<div class="event">
 				<div>
-					<img src="/assets/inicioImagem/feed-image-1.png" width="200px" height="100px" alt="cursos">
-					<h4>Saiba como oferecer seu curso</h4>
+					<img src="/assets/inicioImagem/feed-image-1.png" width="200px" height="100px" alt="cursos" />
+					<p>Saiba como oferecer seu curso</p>
 				</div>
 			</div>
 			<div class="event">
 				<div>
-					<img src="/assets/inicioImagem/feed-image-4.png" width="200px" height="100px" alt="cursos">
-					<p>Possui um negócio local e deseja alcançar mais clientes? Divulga na Manguetech!</p>
+					<img src="/assets/inicioImagem/feed-image-4.png" width="200px" height="100px" alt="cursos" />
+					<p>
+						Possui um negócio local e deseja alcançar mais clientes? Divulga na
+						Manguetech!
+					</p>
 				</div>
 			</div>
 
@@ -204,55 +233,65 @@ integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg
 			</div>
 			<div class="event">
 				<div>
-					<img src="/assets/inicioImagem/feed-image-5.png" width="200px" height="100px" alt="evento com amigos">
-					<p>Participa de algum evento local? Não perde tempo e compartilha aqui!
+					<img src="/assets/inicioImagem/feed-image-5.png" width="200px" height="100px"
+						alt="evento com amigos" />
+					<p>
+						Participa de algum evento local? Não perde tempo e compartilha aqui!
+					</p>
 					<p>#somosmanguetech</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	
 	<!-- Modal -->
 	<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
 		aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+					<h5 class="modal-title" id="TituloModalCentralizado">
+						Nova Postagem
+					</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-						<label for='titulo'>Título</label>
-						<input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
-							placeholder="Digite o título">
+						<label for="titulo">Título</label>
+						<input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo"
+							placeholder="Digite o título" />
 					</div>
 
 					<div class="form-group">
-						<label for='texto'>Texto</label>
-						<textarea [(ngModel)]='postagem.texto' name="texto" class="form-control" id="texto"
+						<label for="texto">Texto</label>
+						<textarea [(ngModel)]="postagem.texto" name="texto" class="form-control" id="texto"
 							placeholder="Digite o título" cols="30" rows="10"></textarea>
 					</div>
 
 					<div class="form-group">
-						<label for='tema'>Escolha o tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um
-								novo</a>: </label>
-						<select name="tema" id="tema" class="form-control" [(ngModel)]='idTema'
-							(change)='findByIdTema()'>
-							<option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+						<label for="tema">Escolha o tema
+							<span *ngIf="authService.adm()">ou
+								<a data-dismiss="modal" routerLink="/tema">cadastre um novo</a></span>:
+						</label>
+						<select name="tema" id="tema" class="form-control" [(ngModel)]="idTema"
+							(change)="findByIdTema()">
+							<option *ngFor="let item of listaTemas" value="{{ item.id }}">
+								{{ item.descricao }}
+							</option>
 						</select>
 					</div>
-
-
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-					<button type="button" class="btn btn-success" (click)='publicar()'
-						data-dismiss="modal">Publicar</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">
+						Cancelar
+					</button>
+					<button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">
+						Publicar
+					</button>
 				</div>
 			</div>
 		</div>
 	</div>
+</body>
