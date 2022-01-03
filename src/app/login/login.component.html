@@ -26,22 +26,25 @@
     <!--End Navbar-->
     <!--Start Landing Page Section-->
 
-    <title>Entre</title>
+    
 
     <body>
         <div class="entrar">
             <h2>Entre</h2>
             <form action="login.html" method="post">
+
                 <div class="input-field">
                     <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario"
                         placeholder="Seu usuário aqui">
                     <label for="nome">E-mail</label>
                 </div>
+
                 <div class="input-field">
                     <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
                         placeholder="Digite a senha">
                     <label for="senha">Senha</label>
                 </div>
+
                 <div class="centro">
                     <button type="submit" class="btn btn-success" (click)='entrar()'>Entrar</button>
                 </div>
