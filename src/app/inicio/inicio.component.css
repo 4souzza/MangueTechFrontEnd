@@ -7,6 +7,10 @@
   box-sizing: border-box;
   font-family: Roboto;
 } */
+
+.nomeperfil{
+	text-transform: capitalize!important;
+}
 :root{
 	--body-color:  #ebecec;
 	--nav-color: #1876f2;
@@ -37,7 +41,7 @@ body{
 	min-width: 80vh;
 }
 .left-sidebar{
-	flex-basis: 25%;
+	flex-basis: 30%;
 	position: sticky;
 	top: 60px;
 	align-self: flex-start;
@@ -45,6 +49,7 @@ body{
 	padding-top: 10px;
 	border-radius: 10px;
 	background: #4B7F52;
+	margin-right: 5%;
 	
 }
 
@@ -97,7 +102,7 @@ body{
 
 
 .right-sidebar{
-	flex-basis: 25%;
+	flex-basis: 30%;
 	position: sticky;
 	top: 60px;
 	align-self: flex-start;
@@ -108,6 +113,7 @@ body{
 	color:white;
 	display: block;
 	justify-content: center;
+	margin-left: 5%;
 }
 
 .right-sidebar .event img{
@@ -245,7 +251,7 @@ body{
 	padding-top:20px;
 }
 .post-input-container textarea{
-	width: 90%;
+	width: 80%;
 	resize:none;
 	border:0;
 	outline:0;

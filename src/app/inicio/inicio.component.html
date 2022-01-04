@@ -6,8 +6,8 @@
 		<div class="left-sidebar">
 			<div class="imp-links bg-cor-lateral">
 				<div class="profile">
-					<div class="imagem">
-						<img src="{{ foto }}" alt="Imagem do user" width="80px" height="80px"
+					<div class="imagem d-flex justify-content-center">
+						<img src="{{ foto }}" alt="Imagem do user" width="100px" height="100px"
 							class="img-fluid rounded-circle" />
 					</div>
 					<div class="nomeperfil">
@@ -58,7 +58,7 @@
 				</div>
 				<div class="story story5">
 					<!-- <img src="images/member-4.png"> -->
-					<p>Seja um parceiro</p>
+					<a href="#contato" target="_blank"><p>Seja um parceiro</p></a>
 				</div>
 			</div>
 			<div class="write-post-container bg-white">
@@ -72,15 +72,15 @@
 					<div class="add-post-links">
 						<a href="#">
 							<img src="/assets/inicioImagem/live-video.png" />
-							Live Video
+							Video
 						</a>
 						<a href="#">
 							<img src="/assets/inicioImagem/photo.png" />
-							Photo/Video
+							Photo
 						</a>
 						<a href="#">
 							<img src="/assets/inicioImagem/feeling.png" />
-							Feeling/Activity
+							Feelings
 						</a>
 					</div>
 				</div>
@@ -121,7 +121,7 @@
 								<!--Todas as postagens-->
 								<div class="card-deck flex-column">
 									<div class="card" *ngFor="let item of listaPostagens">
-										<div class="card-body">
+										<div class="card-body mb-3">
 											<h5 class="card-title m-0">{{ item.titulo }}</h5>
 											<small class="text-muted">Tema: {{ item.tema.descricao }}</small>
 											<p class="card-text mt-3">{{ item.texto }}</p>
@@ -143,9 +143,9 @@
 								aria-labelledby="v-pills-vagas-tab">
 								<div class="card-deck flex-column" *ngFor="let tema of listaTemas">
 									<ng-container *ngIf="tema.id == 1">
-										<h3>{{tema.descricao}}</h3>
+										<h4 class="text-center">{{tema.descricao}}</h4>
 										<div class="card" *ngFor="let item of tema.postagem">
-											<div class="card-body">
+											<div class="card-body mb-3">
 												<h5 class="card-title m-0">{{ item.titulo }}</h5>
 												<p class="card-text mt-3">{{ item.texto }}</p>
 												<p class="card-text">
@@ -164,9 +164,10 @@
 							<div class="tab-pane fade" id="v-pills-cursos" role="tabpanel"
 								aria-labelledby="v-pills-cursos-tab">
 								<div class="card-deck flex-column" *ngFor="let tema of listaTemas">
-									<ng-container *ngIf="tema.id == 2">
+									<ng-container *ngIf="tema.id == 3">
+										<h4 class="text-center">{{tema.descricao}}</h4>
 										<div class="card" *ngFor="let item of tema.postagem">
-											<div class="card-body">
+											<div class="card-body mb-3">
 												<h5 class="card-title m-0">{{ item.titulo }}</h5>
 												<p class="card-text mt-3">{{ item.texto }}</p>
 												<p class="card-text">
@@ -185,9 +186,10 @@
 							<div class="tab-pane fade" id="v-pills-voluntariado" role="tabpanel"
 								aria-labelledby="v-pills-voluntariado-tab">
 								<div class="card-deck flex-column" *ngFor="let tema of listaTemas">
-									<ng-container *ngIf="tema.id == 3">
+									<ng-container *ngIf="tema.id == 4">
+										<h4 class="text-center">{{tema.descricao}}</h4>
 										<div class="card" *ngFor="let item of tema.postagem">
-											<div class="card-body">
+											<div class="card-body mb-3">
 												<h5 class="card-title m-0">{{ item.titulo }}</h5>
 												<p class="card-text mt-3">{{ item.texto }}</p>
 												<p class="card-text">
