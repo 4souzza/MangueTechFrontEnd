@@ -58,7 +58,7 @@ body{
 /*-----Landing Page---------*/
 
 .bg-mangue{
-    background-image:url('/assets/paginaInicial/91352.jpg');
+    background-image:url('/assets/img/inicio.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -97,36 +97,30 @@ body{
 
 
 /*-------------Sobre---------------*/
-
-.bg-sobre{
-    background: #10290e;
+.sobre{
+    background: #202324;
+    color:white;
 }
 
-.transparent{
-    background-color: rgba(255,255,255,0.2);
-    backdrop-filter:blur(10px);
-    border-radius:5px;
-    color:whitesmoke;
-    font-family: Roboto;
-    
-
+.h3-sobre{
+    font-size: 100px!important;
+    color: #06845A;
 }
 
-.transparent:hover{
-    background-color: rgba(255, 255, 255,0.2);
-    transform:scale(1.2);
-    transition: 0.5s;
-    backdrop-filter:blur(10px);
+p{
+    text-align: justify;
 }
 
-.transparent h1{
-    font-size: 40px;
-    font-family: Roboto;
+h3:hover{
+    transform: scale(1.2);
+    color:#6ad187;
+    transition: ease 1s;
 }
 
-.transparent p{
-    font-size: 20px;
+.span-sobre{
+    color:#B22222;
 }
+
 
 /*-----Tecnologias---------*/
 
