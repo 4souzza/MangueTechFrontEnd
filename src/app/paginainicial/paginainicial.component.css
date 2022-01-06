@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato&family=Roboto:wght@100;300;400&display=swap');
+
 
 html{
     padding:0px;
@@ -103,8 +105,11 @@ body{
 }
 
 .h3-sobre{
-    font-size: 100px!important;
+    font-size: 200px!important;
     color: #06845A;
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: normal;
+    
 }
 
 p{
@@ -112,7 +117,7 @@ p{
 }
 
 .h3-sobre:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     color:#6ad187;
     transition: ease 1s;
 }
