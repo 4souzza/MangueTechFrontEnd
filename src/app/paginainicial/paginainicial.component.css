@@ -105,6 +105,8 @@ body{
 .sobre{
     background: #202324;
     color:white;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .h3-sobre{
@@ -419,6 +421,7 @@ footer{
 .footer-col ul li a:hover{
     color: #ffffff;
     padding-left: 10px;
+    cursor: pointer;
 }
 
 .footer-col .social-links a{
@@ -437,6 +440,8 @@ footer{
 .footer-col .social-links a:hover{ 
     color: #24262b;
     background-color: #ffffff;
+    cursor: pointer;
+
 
 }
 
